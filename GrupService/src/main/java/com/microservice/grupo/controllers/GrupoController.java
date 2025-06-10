@@ -6,6 +6,7 @@ import com.microservice.grupo.enums.StatusGrupoModel;
 import com.microservice.grupo.exception.GrupoNaoEncontradoException;
 import com.microservice.grupo.service.GestaoGrupoService;
 
+import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -20,6 +21,10 @@ import java.util.Map;
 
 @RestController
 @RequestMapping("api/grupos")
+@Tag(
+        name = "CRUD REST APIs for Customers in Project",
+        description = "REST APIs in Groups to FETCH customer details"
+)
 public class GrupoController {
 
     private static final Logger log = LoggerFactory.getLogger(GrupoController.class);
